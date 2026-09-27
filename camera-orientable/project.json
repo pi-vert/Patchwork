@@ -1,0 +1,827 @@
+{
+  "format": "patchwork-project",
+  "version": 1,
+  "exportedAt": "2026-09-27T11:02:39.906Z",
+  "project": {
+    "id": "648cf7dc-b6b8-4675-a08f-2a4860f4b8ac",
+    "name": "Camera orientable",
+    "description": "Juste un test de liaisons d'esp32",
+    "repository": "pi-vert/Patchwork",
+    "revision": 7,
+    "nodeIds": [
+      "awtrix_01",
+      "zigbee_00158d000708b5d3",
+      "zigbee_a4c13819f9f3f7dd",
+      "zigbee_f0d1b8000013c9b5",
+      "zigbee_0c4314fffebb71a4"
+    ],
+    "links": [],
+    "firmware": {},
+    "layout": {
+      "awtrix_01": {
+        "x": 1173,
+        "y": 34
+      },
+      "zigbee_00158d000708b5d3": {
+        "x": 888,
+        "y": 8857
+      },
+      "zigbee_a4c13819f9f3f7dd": {
+        "x": 888,
+        "y": 5421
+      },
+      "zigbee_f0d1b8000013c9b5": {
+        "x": 456,
+        "y": 7283
+      },
+      "zigbee_0c4314fffebb71a4": {
+        "x": 24,
+        "y": 9660
+      }
+    },
+    "githubFolder": "camera-orientable",
+    "planSaved": true
+  },
+  "registry": {
+    "awtrix_01": {
+      "schema_version": 1,
+      "standard_version": 2,
+      "id": "awtrix_01",
+      "label": "AWTRIX",
+      "type": "awtrix",
+      "firmware_version": "",
+      "ip": "",
+      "heartbeat_interval_s": 60,
+      "diagnostics_topic": "device/awtrix_01/diagnostics",
+      "diagnostics_interval_s": 30,
+      "availability_topic": "device/awtrix_01/status",
+      "outputs": [],
+      "inputs": [
+        {
+          "name": "text",
+          "label": "text",
+          "datatype": "string",
+          "category": "actuator",
+          "topic": "device/awtrix_01/actuator/text/set",
+          "unit": "",
+          "description": "",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 180,
+          "multiple": "latest"
+        },
+        {
+          "name": "weather",
+          "label": "weather",
+          "datatype": "json",
+          "category": "actuator",
+          "topic": "device/awtrix_01/actuator/weather/set",
+          "unit": "",
+          "description": "",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 180,
+          "multiple": "keyed"
+        }
+      ],
+      "services": []
+    },
+    "zigbee_00158d000708b5d3": {
+      "schema_version": 1,
+      "standard_version": 2,
+      "id": "zigbee_00158d000708b5d3",
+      "label": "presence_entree",
+      "type": "zigbee",
+      "firmware_version": "3000-0001",
+      "ip": "",
+      "heartbeat_interval_s": 3600,
+      "diagnostics_topic": "device/zigbee_00158d000708b5d3/diagnostics",
+      "diagnostics_interval_s": 30,
+      "availability_topic": "device/zigbee_00158d000708b5d3/status",
+      "outputs": [
+        {
+          "name": "occupancy",
+          "label": "Présence",
+          "datatype": "bool",
+          "category": "sensor",
+          "topic": "device/zigbee_00158d000708b5d3/sensor/occupancy/state",
+          "unit": "",
+          "description": "Indicates whether the device detected occupancy",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single"
+        },
+        {
+          "name": "illuminance",
+          "label": "Éclairement",
+          "datatype": "float",
+          "category": "sensor",
+          "topic": "device/zigbee_00158d000708b5d3/sensor/illuminance/state",
+          "unit": "lx",
+          "description": "Measured illuminance",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single"
+        }
+      ],
+      "inputs": [],
+      "services": []
+    },
+    "zigbee_a4c13819f9f3f7dd": {
+      "schema_version": 1,
+      "standard_version": 2,
+      "id": "zigbee_a4c13819f9f3f7dd",
+      "label": "hydroSensor",
+      "type": "zigbee",
+      "firmware_version": "0130072025",
+      "ip": "",
+      "heartbeat_interval_s": 3600,
+      "diagnostics_topic": "device/zigbee_a4c13819f9f3f7dd/diagnostics",
+      "diagnostics_interval_s": 30,
+      "availability_topic": "device/zigbee_a4c13819f9f3f7dd/status",
+      "outputs": [
+        {
+          "name": "dry",
+          "label": "Manque d’eau",
+          "datatype": "bool",
+          "category": "sensor",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/sensor/dry/state",
+          "unit": "",
+          "description": "Water shortage warning",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single"
+        },
+        {
+          "name": "temperature",
+          "label": "Température",
+          "datatype": "float",
+          "category": "sensor",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/sensor/temperature/state",
+          "unit": "°C",
+          "description": "Measured temperature value",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single"
+        },
+        {
+          "name": "humidity",
+          "label": "Humidité de l’air",
+          "datatype": "float",
+          "category": "sensor",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/sensor/humidity/state",
+          "unit": "%",
+          "description": "Measured relative humidity",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single"
+        },
+        {
+          "name": "soil_moisture",
+          "label": "Humidité du sol",
+          "datatype": "float",
+          "category": "sensor",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/sensor/soil_moisture/state",
+          "unit": "%",
+          "description": "Measured soil moisture value",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single"
+        },
+        {
+          "name": "temperature_unit",
+          "label": "Temperature unit",
+          "datatype": "string",
+          "category": "sensor",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/sensor/temperature_unit/state",
+          "unit": "",
+          "description": "Temperature unit",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "values": [
+            "celsius",
+            "fahrenheit"
+          ]
+        },
+        {
+          "name": "temperature_calibration",
+          "label": "Temperature calibration",
+          "datatype": "float",
+          "category": "sensor",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/sensor/temperature_calibration/state",
+          "unit": "°C",
+          "description": "Temperature calibration",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "min": -2,
+          "max": 2,
+          "step": 0.1
+        },
+        {
+          "name": "humidity_calibration",
+          "label": "Humidity calibration",
+          "datatype": "float",
+          "category": "sensor",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/sensor/humidity_calibration/state",
+          "unit": "%",
+          "description": "Humidity calibration",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "min": -30,
+          "max": 30,
+          "step": 1
+        },
+        {
+          "name": "soil_calibration",
+          "label": "Soil calibration",
+          "datatype": "float",
+          "category": "sensor",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/sensor/soil_calibration/state",
+          "unit": "%",
+          "description": "Soil Humidity calibration",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "min": -30,
+          "max": 30,
+          "step": 1
+        },
+        {
+          "name": "temperature_sampling",
+          "label": "Temperature sampling",
+          "datatype": "float",
+          "category": "sensor",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/sensor/temperature_sampling/state",
+          "unit": "s",
+          "description": "Air temperature and humidity sampling",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "min": 5,
+          "max": 3600,
+          "step": 1
+        },
+        {
+          "name": "soil_sampling",
+          "label": "Soil sampling",
+          "datatype": "float",
+          "category": "sensor",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/sensor/soil_sampling/state",
+          "unit": "s",
+          "description": "Soil humidity sampling",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "min": 5,
+          "max": 3600,
+          "step": 1
+        },
+        {
+          "name": "soil_warning",
+          "label": "Soil warning",
+          "datatype": "float",
+          "category": "sensor",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/sensor/soil_warning/state",
+          "unit": "%",
+          "description": "Soil water shortage humidity value",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        }
+      ],
+      "inputs": [
+        {
+          "name": "temperature_unit",
+          "label": "Temperature unit",
+          "datatype": "string",
+          "category": "actuator",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/actuator/temperature_unit/set",
+          "unit": "",
+          "description": "Temperature unit",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "values": [
+            "celsius",
+            "fahrenheit"
+          ]
+        },
+        {
+          "name": "temperature_calibration",
+          "label": "Temperature calibration",
+          "datatype": "float",
+          "category": "actuator",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/actuator/temperature_calibration/set",
+          "unit": "°C",
+          "description": "Temperature calibration",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "min": -2,
+          "max": 2,
+          "step": 0.1
+        },
+        {
+          "name": "humidity_calibration",
+          "label": "Humidity calibration",
+          "datatype": "float",
+          "category": "actuator",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/actuator/humidity_calibration/set",
+          "unit": "%",
+          "description": "Humidity calibration",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "min": -30,
+          "max": 30,
+          "step": 1
+        },
+        {
+          "name": "soil_calibration",
+          "label": "Soil calibration",
+          "datatype": "float",
+          "category": "actuator",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/actuator/soil_calibration/set",
+          "unit": "%",
+          "description": "Soil Humidity calibration",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "min": -30,
+          "max": 30,
+          "step": 1
+        },
+        {
+          "name": "temperature_sampling",
+          "label": "Temperature sampling",
+          "datatype": "float",
+          "category": "actuator",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/actuator/temperature_sampling/set",
+          "unit": "s",
+          "description": "Air temperature and humidity sampling",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "min": 5,
+          "max": 3600,
+          "step": 1
+        },
+        {
+          "name": "soil_sampling",
+          "label": "Soil sampling",
+          "datatype": "float",
+          "category": "actuator",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/actuator/soil_sampling/set",
+          "unit": "s",
+          "description": "Soil humidity sampling",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "min": 5,
+          "max": 3600,
+          "step": 1
+        },
+        {
+          "name": "soil_warning",
+          "label": "Soil warning",
+          "datatype": "float",
+          "category": "actuator",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/actuator/soil_warning/set",
+          "unit": "%",
+          "description": "Soil water shortage humidity value",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "name": "identify",
+          "label": "Identify",
+          "datatype": "string",
+          "category": "actuator",
+          "topic": "device/zigbee_a4c13819f9f3f7dd/actuator/identify/set",
+          "unit": "",
+          "description": "Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command.",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 86400,
+          "multiple": "single",
+          "values": [
+            "identify"
+          ]
+        }
+      ],
+      "services": []
+    },
+    "zigbee_f0d1b8000013c9b5": {
+      "schema_version": 1,
+      "standard_version": 2,
+      "id": "zigbee_f0d1b8000013c9b5",
+      "label": "lumiere_entree",
+      "type": "zigbee",
+      "firmware_version": "01056400",
+      "ip": "",
+      "heartbeat_interval_s": 200,
+      "diagnostics_topic": "device/zigbee_f0d1b8000013c9b5/diagnostics",
+      "diagnostics_interval_s": 30,
+      "availability_topic": "device/zigbee_f0d1b8000013c9b5/status",
+      "outputs": [
+        {
+          "name": "state",
+          "label": "State",
+          "datatype": "bool",
+          "category": "sensor",
+          "topic": "device/zigbee_f0d1b8000013c9b5/sensor/state/state",
+          "unit": "",
+          "description": "On/off state of this light",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 600,
+          "multiple": "single"
+        },
+        {
+          "name": "brightness",
+          "label": "Luminosité",
+          "datatype": "float",
+          "category": "sensor",
+          "topic": "device/zigbee_f0d1b8000013c9b5/sensor/brightness/state",
+          "unit": "",
+          "description": "Brightness of this light",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 600,
+          "multiple": "single",
+          "min": 0,
+          "max": 254
+        },
+        {
+          "name": "color_temp",
+          "label": "Température de couleur",
+          "datatype": "float",
+          "category": "sensor",
+          "topic": "device/zigbee_f0d1b8000013c9b5/sensor/color_temp/state",
+          "unit": "mired",
+          "description": "Color temperature of this light",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 600,
+          "multiple": "single",
+          "min": 153,
+          "max": 370
+        }
+      ],
+      "inputs": [
+        {
+          "name": "state",
+          "label": "State",
+          "datatype": "bool",
+          "category": "actuator",
+          "topic": "device/zigbee_f0d1b8000013c9b5/actuator/state/set",
+          "unit": "",
+          "description": "On/off state of this light",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 600,
+          "multiple": "single"
+        },
+        {
+          "name": "brightness",
+          "label": "Luminosité",
+          "datatype": "float",
+          "category": "actuator",
+          "topic": "device/zigbee_f0d1b8000013c9b5/actuator/brightness/set",
+          "unit": "",
+          "description": "Brightness of this light",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 600,
+          "multiple": "single",
+          "min": 0,
+          "max": 254
+        },
+        {
+          "name": "color_temp",
+          "label": "Température de couleur",
+          "datatype": "float",
+          "category": "actuator",
+          "topic": "device/zigbee_f0d1b8000013c9b5/actuator/color_temp/set",
+          "unit": "mired",
+          "description": "Color temperature of this light",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 600,
+          "multiple": "single",
+          "min": 153,
+          "max": 370
+        },
+        {
+          "name": "effect",
+          "label": "Effect",
+          "datatype": "string",
+          "category": "actuator",
+          "topic": "device/zigbee_f0d1b8000013c9b5/actuator/effect/set",
+          "unit": "",
+          "description": "Triggers an effect on the light (e.g. make light blink for a few seconds)",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 600,
+          "multiple": "single",
+          "values": [
+            "blink",
+            "breathe",
+            "okay",
+            "channel_change",
+            "finish_effect",
+            "stop_effect"
+          ]
+        }
+      ],
+      "services": []
+    },
+    "zigbee_0c4314fffebb71a4": {
+      "schema_version": 1,
+      "standard_version": 2,
+      "id": "zigbee_0c4314fffebb71a4",
+      "label": "switch_christine",
+      "type": "zigbee",
+      "firmware_version": "20200927",
+      "ip": "",
+      "heartbeat_interval_s": 200,
+      "diagnostics_topic": "device/zigbee_0c4314fffebb71a4/diagnostics",
+      "diagnostics_interval_s": 30,
+      "availability_topic": "device/zigbee_0c4314fffebb71a4/status",
+      "outputs": [
+        {
+          "name": "state",
+          "label": "State",
+          "datatype": "bool",
+          "category": "sensor",
+          "topic": "device/zigbee_0c4314fffebb71a4/sensor/state/state",
+          "unit": "",
+          "description": "On/off state of the switch",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 600,
+          "multiple": "single"
+        }
+      ],
+      "inputs": [
+        {
+          "name": "state",
+          "label": "State",
+          "datatype": "bool",
+          "category": "actuator",
+          "topic": "device/zigbee_0c4314fffebb71a4/actuator/state/set",
+          "unit": "",
+          "description": "On/off state of the switch",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 600,
+          "multiple": "single"
+        }
+      ],
+      "services": []
+    }
+  },
+  "virtuals": {
+    "awtrix_01": {
+      "schema_version": 1,
+      "standard_version": 2,
+      "id": "awtrix_01",
+      "label": "AWTRIX",
+      "type": "awtrix",
+      "firmware_version": "",
+      "ip": "",
+      "heartbeat_interval_s": 60,
+      "diagnostics_topic": "device/awtrix_01/diagnostics",
+      "diagnostics_interval_s": 30,
+      "availability_topic": "device/awtrix_01/status",
+      "outputs": [],
+      "inputs": [
+        {
+          "name": "text",
+          "label": "text",
+          "datatype": "string",
+          "category": "actuator",
+          "topic": "device/awtrix_01/actuator/text/set",
+          "unit": "",
+          "description": "",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 180,
+          "multiple": "latest"
+        },
+        {
+          "name": "weather",
+          "label": "weather",
+          "datatype": "json",
+          "category": "actuator",
+          "topic": "device/awtrix_01/actuator/weather/set",
+          "unit": "",
+          "description": "",
+          "kind": "state",
+          "qos": 0,
+          "retain": false,
+          "ttl_s": 180,
+          "multiple": "keyed"
+        }
+      ],
+      "services": [],
+      "adapter": {
+        "kind": "awtrix",
+        "prefix": "awtrix_tank"
+      }
+    }
+  },
+  "zigbee": {
+    "zigbee_00158d000708b5d3": {
+      "kind": "zigbee2mqtt",
+      "topic": "zigbee2mqtt/presence_entree",
+      "ieee_address": "0x00158d000708b5d3",
+      "model": "RTCGQ11LM",
+      "vendor": "Aqara",
+      "power_source": "Battery",
+      "presence_timeout_s": 90000,
+      "properties": {
+        "occupancy": {
+          "type": "binary",
+          "on": true,
+          "off": false,
+          "writable": false
+        },
+        "illuminance": {
+          "type": "numeric",
+          "writable": false
+        }
+      }
+    },
+    "zigbee_a4c13819f9f3f7dd": {
+      "kind": "zigbee2mqtt",
+      "topic": "zigbee2mqtt/hydroSensor",
+      "ieee_address": "0xa4c13819f9f3f7dd",
+      "model": "CS-201Z",
+      "vendor": "COOLO",
+      "power_source": "Battery",
+      "presence_timeout_s": 90000,
+      "properties": {
+        "dry": {
+          "type": "binary",
+          "on": true,
+          "off": false,
+          "writable": false
+        },
+        "temperature": {
+          "type": "numeric",
+          "writable": false
+        },
+        "humidity": {
+          "type": "numeric",
+          "writable": false
+        },
+        "soil_moisture": {
+          "type": "numeric",
+          "writable": false
+        },
+        "temperature_unit": {
+          "type": "enum",
+          "writable": true
+        },
+        "temperature_calibration": {
+          "type": "numeric",
+          "writable": true
+        },
+        "humidity_calibration": {
+          "type": "numeric",
+          "writable": true
+        },
+        "soil_calibration": {
+          "type": "numeric",
+          "writable": true
+        },
+        "temperature_sampling": {
+          "type": "numeric",
+          "writable": true
+        },
+        "soil_sampling": {
+          "type": "numeric",
+          "writable": true
+        },
+        "soil_warning": {
+          "type": "numeric",
+          "writable": true
+        },
+        "identify": {
+          "type": "enum",
+          "writable": true
+        }
+      }
+    },
+    "zigbee_f0d1b8000013c9b5": {
+      "kind": "zigbee2mqtt",
+      "topic": "zigbee2mqtt/lumiere_entree",
+      "ieee_address": "0xf0d1b8000013c9b5",
+      "model": "4058075168572",
+      "vendor": "LEDVANCE",
+      "power_source": "Mains (single phase)",
+      "presence_timeout_s": 600,
+      "properties": {
+        "state": {
+          "type": "binary",
+          "on": "ON",
+          "off": "OFF",
+          "writable": true
+        },
+        "brightness": {
+          "type": "numeric",
+          "writable": true
+        },
+        "color_temp": {
+          "type": "numeric",
+          "writable": true
+        },
+        "effect": {
+          "type": "enum",
+          "writable": true
+        }
+      }
+    },
+    "zigbee_0c4314fffebb71a4": {
+      "kind": "zigbee2mqtt",
+      "topic": "zigbee2mqtt/switch_christine",
+      "ieee_address": "0x0c4314fffebb71a4",
+      "model": "ZBMINI",
+      "vendor": "SONOFF",
+      "power_source": "Mains (single phase)",
+      "presence_timeout_s": 600,
+      "properties": {
+        "state": {
+          "type": "binary",
+          "on": "ON",
+          "off": "OFF",
+          "writable": true
+        }
+      }
+    }
+  }
+}
